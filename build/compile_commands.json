@@ -1,0 +1,56 @@
+[
+{
+  "directory": "/Users/tchicherin/Projects/BST/build",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -I/Users/tchicherin/Projects/BST/build/TreeVisualizer_autogen/include -isystem /usr/local/lib/QtCore.framework/Headers -iframework /usr/local/lib -isystem /usr/local/share/qt/mkspecs/macx-clang -isystem /usr/local/include -isystem /usr/local/lib/QtWidgets.framework/Headers -isystem /usr/local/lib/QtGui.framework/Headers -DQT_QML_DEBUG -DQT_DECLARATIVE_DEBUG -g -std=gnu++20 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.4.sdk -mmacosx-version-min=14.0 -fPIC -o CMakeFiles/TreeVisualizer.dir/TreeVisualizer_autogen/mocs_compilation.cpp.o -c /Users/tchicherin/Projects/BST/build/TreeVisualizer_autogen/mocs_compilation.cpp",
+  "file": "/Users/tchicherin/Projects/BST/build/TreeVisualizer_autogen/mocs_compilation.cpp",
+  "output": "CMakeFiles/TreeVisualizer.dir/TreeVisualizer_autogen/mocs_compilation.cpp.o"
+},
+{
+  "directory": "/Users/tchicherin/Projects/BST/build",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -I/Users/tchicherin/Projects/BST/build/TreeVisualizer_autogen/include -isystem /usr/local/lib/QtCore.framework/Headers -iframework /usr/local/lib -isystem /usr/local/share/qt/mkspecs/macx-clang -isystem /usr/local/include -isystem /usr/local/lib/QtWidgets.framework/Headers -isystem /usr/local/lib/QtGui.framework/Headers -DQT_QML_DEBUG -DQT_DECLARATIVE_DEBUG -g -std=gnu++20 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.4.sdk -mmacosx-version-min=14.0 -fPIC -o CMakeFiles/TreeVisualizer.dir/main.cpp.o -c /Users/tchicherin/Projects/BST/TreeVisualizer/main.cpp",
+  "file": "/Users/tchicherin/Projects/BST/TreeVisualizer/main.cpp",
+  "output": "CMakeFiles/TreeVisualizer.dir/main.cpp.o"
+},
+{
+  "directory": "/Users/tchicherin/Projects/BST/build",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -I/Users/tchicherin/Projects/BST/build/TreeVisualizer_autogen/include -isystem /usr/local/lib/QtCore.framework/Headers -iframework /usr/local/lib -isystem /usr/local/share/qt/mkspecs/macx-clang -isystem /usr/local/include -isystem /usr/local/lib/QtWidgets.framework/Headers -isystem /usr/local/lib/QtGui.framework/Headers -DQT_QML_DEBUG -DQT_DECLARATIVE_DEBUG -g -std=gnu++20 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.4.sdk -mmacosx-version-min=14.0 -fPIC -o CMakeFiles/TreeVisualizer.dir/mainwindow.cpp.o -c /Users/tchicherin/Projects/BST/TreeVisualizer/mainwindow.cpp",
+  "file": "/Users/tchicherin/Projects/BST/TreeVisualizer/mainwindow.cpp",
+  "output": "CMakeFiles/TreeVisualizer.dir/mainwindow.cpp.o"
+},
+{
+  "directory": "/Users/tchicherin/Projects/BST/build",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -I/Users/tchicherin/Projects/BST/build/TreeVisualizer_autogen/include -isystem /usr/local/lib/QtCore.framework/Headers -iframework /usr/local/lib -isystem /usr/local/share/qt/mkspecs/macx-clang -isystem /usr/local/include -isystem /usr/local/lib/QtWidgets.framework/Headers -isystem /usr/local/lib/QtGui.framework/Headers -DQT_QML_DEBUG -DQT_DECLARATIVE_DEBUG -g -std=gnu++20 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.4.sdk -mmacosx-version-min=14.0 -fPIC -o CMakeFiles/TreeVisualizer.dir/impl/AVLTree.cpp.o -c /Users/tchicherin/Projects/BST/TreeVisualizer/impl/AVLTree.cpp",
+  "file": "/Users/tchicherin/Projects/BST/TreeVisualizer/impl/AVLTree.cpp",
+  "output": "CMakeFiles/TreeVisualizer.dir/impl/AVLTree.cpp.o"
+},
+{
+  "directory": "/Users/tchicherin/Projects/BST/build",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -I/Users/tchicherin/Projects/BST/build/TreeVisualizer_autogen/include -isystem /usr/local/lib/QtCore.framework/Headers -iframework /usr/local/lib -isystem /usr/local/share/qt/mkspecs/macx-clang -isystem /usr/local/include -isystem /usr/local/lib/QtWidgets.framework/Headers -isystem /usr/local/lib/QtGui.framework/Headers -DQT_QML_DEBUG -DQT_DECLARATIVE_DEBUG -g -std=gnu++20 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.4.sdk -mmacosx-version-min=14.0 -fPIC -o CMakeFiles/TreeVisualizer.dir/impl/RBTree.cpp.o -c /Users/tchicherin/Projects/BST/TreeVisualizer/impl/RBTree.cpp",
+  "file": "/Users/tchicherin/Projects/BST/TreeVisualizer/impl/RBTree.cpp",
+  "output": "CMakeFiles/TreeVisualizer.dir/impl/RBTree.cpp.o"
+},
+{
+  "directory": "/Users/tchicherin/Projects/BST/build",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -I/Users/tchicherin/Projects/BST/build/TreeVisualizer_autogen/include -isystem /usr/local/lib/QtCore.framework/Headers -iframework /usr/local/lib -isystem /usr/local/share/qt/mkspecs/macx-clang -isystem /usr/local/include -isystem /usr/local/lib/QtWidgets.framework/Headers -isystem /usr/local/lib/QtGui.framework/Headers -DQT_QML_DEBUG -DQT_DECLARATIVE_DEBUG -g -std=gnu++20 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.4.sdk -mmacosx-version-min=14.0 -fPIC -o CMakeFiles/TreeVisualizer.dir/impl/SplayTree.cpp.o -c /Users/tchicherin/Projects/BST/TreeVisualizer/impl/SplayTree.cpp",
+  "file": "/Users/tchicherin/Projects/BST/TreeVisualizer/impl/SplayTree.cpp",
+  "output": "CMakeFiles/TreeVisualizer.dir/impl/SplayTree.cpp.o"
+},
+{
+  "directory": "/Users/tchicherin/Projects/BST/build",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -I/Users/tchicherin/Projects/BST/build/TreeVisualizer_autogen/include -isystem /usr/local/lib/QtCore.framework/Headers -iframework /usr/local/lib -isystem /usr/local/share/qt/mkspecs/macx-clang -isystem /usr/local/include -isystem /usr/local/lib/QtWidgets.framework/Headers -isystem /usr/local/lib/QtGui.framework/Headers -DQT_QML_DEBUG -DQT_DECLARATIVE_DEBUG -g -std=gnu++20 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.4.sdk -mmacosx-version-min=14.0 -fPIC -o CMakeFiles/TreeVisualizer.dir/impl/BTree.cpp.o -c /Users/tchicherin/Projects/BST/TreeVisualizer/impl/BTree.cpp",
+  "file": "/Users/tchicherin/Projects/BST/TreeVisualizer/impl/BTree.cpp",
+  "output": "CMakeFiles/TreeVisualizer.dir/impl/BTree.cpp.o"
+},
+{
+  "directory": "/Users/tchicherin/Projects/BST/build",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -I/Users/tchicherin/Projects/BST/build/TreeVisualizer_autogen/include -isystem /usr/local/lib/QtCore.framework/Headers -iframework /usr/local/lib -isystem /usr/local/share/qt/mkspecs/macx-clang -isystem /usr/local/include -isystem /usr/local/lib/QtWidgets.framework/Headers -isystem /usr/local/lib/QtGui.framework/Headers -DQT_QML_DEBUG -DQT_DECLARATIVE_DEBUG -g -std=gnu++20 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.4.sdk -mmacosx-version-min=14.0 -fPIC -o CMakeFiles/TreeVisualizer.dir/impl/Treap.cpp.o -c /Users/tchicherin/Projects/BST/TreeVisualizer/impl/Treap.cpp",
+  "file": "/Users/tchicherin/Projects/BST/TreeVisualizer/impl/Treap.cpp",
+  "output": "CMakeFiles/TreeVisualizer.dir/impl/Treap.cpp.o"
+},
+{
+  "directory": "/Users/tchicherin/Projects/BST/build",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++ -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -I/Users/tchicherin/Projects/BST/build/TreeVisualizer_autogen/include -isystem /usr/local/lib/QtCore.framework/Headers -iframework /usr/local/lib -isystem /usr/local/share/qt/mkspecs/macx-clang -isystem /usr/local/include -isystem /usr/local/lib/QtWidgets.framework/Headers -isystem /usr/local/lib/QtGui.framework/Headers -DQT_QML_DEBUG -DQT_DECLARATIVE_DEBUG -g -std=gnu++20 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX15.4.sdk -mmacosx-version-min=14.0 -fPIC -o CMakeFiles/TreeVisualizer.dir/impl/Visualization.cpp.o -c /Users/tchicherin/Projects/BST/TreeVisualizer/impl/Visualization.cpp",
+  "file": "/Users/tchicherin/Projects/BST/TreeVisualizer/impl/Visualization.cpp",
+  "output": "CMakeFiles/TreeVisualizer.dir/impl/Visualization.cpp.o"
+}
+]

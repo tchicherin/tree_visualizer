@@ -1,0 +1,2 @@
+set(__QT_DEPLOY_TARGET_TreeVisualizer_FILE /Users/tchicherin/Projects/BST/build/TreeVisualizer.app/Contents/MacOS/TreeVisualizer)
+set(__QT_DEPLOY_TARGET_TreeVisualizer_TYPE EXECUTABLE)
