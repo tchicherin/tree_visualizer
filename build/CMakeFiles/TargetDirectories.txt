@@ -1,9 +1,0 @@
-/Users/tchicherin/Projects/BST/build/CMakeFiles/TreeVisualizer.dir
-/Users/tchicherin/Projects/BST/build/CMakeFiles/edit_cache.dir
-/Users/tchicherin/Projects/BST/build/CMakeFiles/rebuild_cache.dir
-/Users/tchicherin/Projects/BST/build/CMakeFiles/list_install_components.dir
-/Users/tchicherin/Projects/BST/build/CMakeFiles/install.dir
-/Users/tchicherin/Projects/BST/build/CMakeFiles/install/local.dir
-/Users/tchicherin/Projects/BST/build/CMakeFiles/install/strip.dir
-/Users/tchicherin/Projects/BST/build/CMakeFiles/TreeVisualizer_autogen_timestamp_deps.dir
-/Users/tchicherin/Projects/BST/build/CMakeFiles/TreeVisualizer_autogen.dir
