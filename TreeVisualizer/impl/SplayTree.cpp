@@ -186,7 +186,8 @@ SplayTree<T>::Node* SplayTree<T>::Merge(Node *a, Node *b) {
 
 template <typename T>
 bool SplayTree<T>::Find(T value) {
-  return FindNode(value) != nullptr;
+  selected_ = FindNode(value);
+  return selected_ != nullptr;
 }
 
 template <typename T>
@@ -205,7 +206,11 @@ VisualizationData* SplayTree<T>::GetVisualizationData() {
     }
     VisualizationData *data = new VisualizationData();
     data->keys.push_back(std::to_string(node->value));
-    data->colors.push_back({QColor("#CDCDCE"), QColor(Qt::black)});
+    if (node != selected_) {
+      data->colors.push_back({QColor("#CDCDCE"), QColor(Qt::black)});
+    } else {
+      data->colors.push_back({QColor(Qt::green), QColor(Qt::white)});
+    }
     data->children = {self(self, node->left_), self(self, node->right_)};
     return data;
   };

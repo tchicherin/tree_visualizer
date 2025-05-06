@@ -21,7 +21,7 @@ Widget::Widget(QWidget *parent) : QWidget(parent), ui(new Ui::Widget) {
   ui->gView->setInteractive(true);
   ui->gView->setDragMode(QGraphicsView::ScrollHandDrag);
 
-  ui->treeComboBox->insertItem(0, QString(""));
+  ui->treeComboBox->insertItem(0, QString("Reset"));
   ui->treeComboBox->insertItem(1, QString("AVL Tree"));
   ui->treeComboBox->insertItem(2, QString("RB Tree"));
   ui->treeComboBox->insertItem(3, QString("Splay Tree"));
@@ -35,9 +35,9 @@ Widget::Widget(QWidget *parent) : QWidget(parent), ui(new Ui::Widget) {
   QObject::connect(zoomOutShortcut, &QShortcut::activated, this, &Widget::ZoomOut);
 }
 
-int Widget::GetNodeInput() {
+int Widget::GetNodeInput(QLineEdit *edit) {
   char* end;
-  long res = strtol(ui->valueEdit->text().toStdString().c_str(), &end, 10);
+  long res = strtol(edit->text().toStdString().c_str(), &end, 10);
   if (*end || res > INT_MAX || res < INT_MIN) {
     return -1;
   }
@@ -45,7 +45,7 @@ int Widget::GetNodeInput() {
 }
 
 void Widget::on_insertButton_clicked() {
-  if (int inp = GetNodeInput(); inp != -1) {
+  if (int inp = GetNodeInput(ui->valueEdit); inp != -1) {
     if (tree != nullptr) {
       tree->Insert(inp);
       Visualize(tree, this, ui->gView->scene(), tree->GetVisualizationData());
@@ -54,7 +54,7 @@ void Widget::on_insertButton_clicked() {
 }
 
 void Widget::on_eraseButton_clicked() {
-  if (int inp = GetNodeInput(); inp != -1) {
+  if (int inp = GetNodeInput(ui->valueEdit); inp != -1) {
     if (tree != nullptr) {
       tree->Erase(inp);
       Visualize(tree, this, ui->gView->scene(), tree->GetVisualizationData());
@@ -63,7 +63,7 @@ void Widget::on_eraseButton_clicked() {
 }
 
 void Widget::on_findButton_clicked() {
-  if (int inp = GetNodeInput(); inp != -1) {
+  if (int inp = GetNodeInput(ui->valueEdit); inp != -1) {
     if (tree != nullptr) {
       tree->Find(inp);
       Visualize(tree, this, ui->gView->scene(), tree->GetVisualizationData());
@@ -71,7 +71,23 @@ void Widget::on_findButton_clicked() {
   }
 }
 
-void Widget::on_treeComboBox_currentIndexChanged(int index) {
+void Widget::MakeTree() {
+  std::vector<int> init_keys;
+  if (tree != nullptr) {
+    VisualizationData *data = tree->GetVisualizationData();
+    auto DFS = [&](auto&& self, VisualizationData *root) {
+      if (root == nullptr) {
+        return;
+      }
+      for (auto key : root->keys) {
+        init_keys.push_back(std::stoi(key));
+      }
+      for (auto child : root->children) {
+        self(self, child);
+      }
+    };
+    DFS(DFS, data);
+  }
   if (ui->gView->scene()) {
     ui->gView->scene()->clear();
   }
@@ -88,12 +104,30 @@ void Widget::on_treeComboBox_currentIndexChanged(int index) {
   } else if (index == 3) {
     tree = new SplayTree<int>(); 
   } else if (index == 4) {
-    tree = new BTree<int>();
+    tree = new BTree<int>(factor);
   } else if (index == 5) {
     tree = new Treap<int>();
   } else {
     tree = nullptr;
   }
+  if (tree != nullptr) {
+    for (int key : init_keys) {
+      tree->Insert(key);
+    }
+    Visualize(tree, this, ui->gView->scene(), tree->GetVisualizationData());
+  }
+}
+
+void Widget::on_submitButton_clicked() {
+  if (int res = GetNodeInput(ui->childFactorEdit); res >= 2) {
+    factor = res;
+    MakeTree();
+  }
+}
+
+void Widget::on_treeComboBox_currentIndexChanged(int ind) {
+  index = ind;
+  MakeTree();
 }
 
 void Widget::ZoomView(qreal factor) {

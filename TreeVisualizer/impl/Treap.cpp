@@ -38,6 +38,9 @@ Treap<T>::Node* Treap<T>::Merge(Node *a, Node *b) {
 
 template <typename T>
 void Treap<T>::Insert(T key) {
+  if (FindNode(key) != nullptr) {
+    return;
+  }
   auto [L, R] = Split(root_, key);
   root_ = Merge(L, Merge(new Node(key), R));
 }
@@ -80,7 +83,11 @@ VisualizationData* Treap<T>::GetVisualizationData() {
     }
     VisualizationData *data = new VisualizationData();
     data->keys.push_back(std::to_string(node->value));
-    data->colors.push_back({QColor("#CDCDCE"), QColor(Qt::black)});
+    if (node != selected_) {
+      data->colors.push_back({QColor("#CDCDCE"), QColor(Qt::black)});
+    } else {
+      data->colors.push_back({QColor(Qt::green), QColor(Qt::white)});
+    }
     data->children = {self(self, node->left_), self(self, node->right_)};
     return data;
   };

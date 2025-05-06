@@ -18,7 +18,7 @@
     <rect>
      <x>10</x>
      <y>0</y>
-     <width>181</width>
+     <width>188</width>
      <height>38</height>
     </rect>
    </property>
@@ -116,6 +116,40 @@
      <height>601</height>
     </rect>
    </property>
+  </widget>
+  <widget class="QWidget" name="layoutWidget_2">
+   <property name="geometry">
+    <rect>
+     <x>200</x>
+     <y>0</y>
+     <width>266</width>
+     <height>38</height>
+    </rect>
+   </property>
+   <layout class="QHBoxLayout" name="horizontalLayout_3">
+    <item>
+     <widget class="QLabel" name="label_4">
+      <property name="font">
+       <font>
+        <pointsize>16</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Select child factor:</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLineEdit" name="childFactorEdit"/>
+    </item>
+    <item>
+     <widget class="QPushButton" name="submitButton">
+      <property name="text">
+       <string>Submit</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
   </widget>
  </widget>
  <resources/>

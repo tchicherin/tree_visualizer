@@ -97,7 +97,6 @@ RBTree<T>::Node* RBTree<T>::FindNode(T value) {
     if (value < current->value) {
       current = current->left_;
     } else if (value == current->value) {
-      selected_ = current;
       return current;
     } else {
       current = current->right_;

@@ -3,6 +3,7 @@
 
 #include <QWidget>
 #include <QWheelEvent>
+#include <QLineEdit>
 #include "impl/Visualization.h"
 
 QT_BEGIN_NAMESPACE
@@ -17,8 +18,10 @@ class Widget : public QWidget {
   ~Widget();
 
   VisualizableTree<int> *tree = nullptr;
+  int index = 0, factor = 2;
 
  private slots:
+  void on_submitButton_clicked();
   void on_insertButton_clicked();
   void on_eraseButton_clicked();
   void on_findButton_clicked();
@@ -27,13 +30,15 @@ class Widget : public QWidget {
  private:
   Ui::Widget *ui;
 
-  int GetNodeInput();
+  int GetNodeInput(QLineEdit *edit);
 
   void ZoomIn();
 
   void ZoomOut();
 
   void ZoomView(qreal factor);
+
+  void MakeTree();
 };
 
 #endif // MAINWINDOW_H
