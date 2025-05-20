@@ -13,6 +13,8 @@
 #include <QCursor>
 #include <string>
 #include <limits>
+#include <random>
+#include <chrono>
 
 Widget::Widget(QWidget *parent) : QWidget(parent), ui(new Ui::Widget) {
   ui->setupUi(this);
@@ -48,6 +50,7 @@ void Widget::on_insertButton_clicked() {
   if (int inp = GetNodeInput(ui->valueEdit); inp != -1) {
     if (tree != nullptr) {
       tree->Insert(inp);
+      ui->gView->centerOn(0, 0);
       Visualize(tree, this, ui->gView->scene(), tree->GetVisualizationData());
     }
   }
@@ -66,6 +69,26 @@ void Widget::on_findButton_clicked() {
   if (int inp = GetNodeInput(ui->valueEdit); inp != -1) {
     if (tree != nullptr) {
       tree->Find(inp);
+      Visualize(tree, this, ui->gView->scene(), tree->GetVisualizationData());
+    }
+  }
+}
+
+void Widget::on_randomButton_clicked() {
+  static std::mt19937 rng(std::chrono::steady_clock::now().time_since_epoch().count());
+  if (int inp = GetNodeInput(ui->valueEdit); inp != -1) {
+    if (tree != nullptr) {
+      int iter = 0;
+      double start_time = 1.0 * clock() / CLOCKS_PER_SEC;
+      for (int i = 0; i < inp && 1.0 * clock() / CLOCKS_PER_SEC <= start_time + 0.1; i++) {
+        int value = rng() % int(1e9) + 1;
+        if (tree->Find(value)) {
+          --i;
+          continue;
+        }
+        tree->Insert(value);
+      }
+      ui->gView->centerOn(0, 0);
       Visualize(tree, this, ui->gView->scene(), tree->GetVisualizationData());
     }
   }
@@ -94,6 +117,7 @@ void Widget::MakeTree() {
   ui->gView->resetTransform();
   ui->gView->centerOn(0, 0);
   delete ui->gView->scene();
+  ui->gView->setAlignment(Qt::AlignCenter);
   ui->gView->setScene(new QGraphicsScene(ui->gView));
   ui->gView->setViewportUpdateMode(QGraphicsView::MinimalViewportUpdate);
   delete tree;

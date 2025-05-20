@@ -2,6 +2,7 @@
 #define VISUALIZATION_IMPL
 
 #include <QGraphicsScene>
+#include <QGraphicsView>
 #include <QGraphicsRectItem>
 #include <QFontMetrics>
 #include <QApplication>
@@ -146,6 +147,7 @@ static void Visualize(VisualizableTree<int> *tree, QWidget *widget,
   };
   PreinitItems(PreinitItems, data);
   ShowItems(ShowItems, data, 0, 0);
+  scene->setSceneRect(scene->itemsBoundingRect());
 }
 
 #endif // VISUALIZATION_H

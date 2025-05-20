@@ -45,7 +45,7 @@
     <rect>
      <x>10</x>
      <y>40</y>
-     <width>439</width>
+     <width>511</width>
      <height>33</height>
     </rect>
    </property>
@@ -102,6 +102,13 @@
      <widget class="QPushButton" name="findButton">
       <property name="text">
        <string>Find</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="randomButton">
+      <property name="text">
+       <string>Random</string>
       </property>
      </widget>
     </item>

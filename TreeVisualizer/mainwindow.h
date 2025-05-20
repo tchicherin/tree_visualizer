@@ -26,6 +26,7 @@ class Widget : public QWidget {
   void on_eraseButton_clicked();
   void on_findButton_clicked();
   void on_treeComboBox_currentIndexChanged(int index);
+  void on_randomButton_clicked();
 
  private:
   Ui::Widget *ui;

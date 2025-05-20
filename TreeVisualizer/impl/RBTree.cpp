@@ -273,7 +273,6 @@ void RBTree<T>::RebalanceErase(Node *node) {
           }
         } else {
           p->color_ = Node::kBlack;
-          cur->color_ = Node::kRed;
           if (b) {
             b->color_ = Node::kRed;
           }
@@ -305,15 +304,16 @@ void RBTree<T>::RebalanceErase(Node *node) {
           RotateRight(b);
           RotateLeft(p);
           sl->color_ = Node::kBlack;
-          b->color_ = Node::kRed;
+          // b->color_ = Node::kRed;
           break;
         } else if (GetColor(sr) == Node::kRed && IsLeft(sr) != IsLeft(b)) {
           RotateLeft(b);
-          RotateRight(p);
+          RotateRight(p); 
           sr->color_ = Node::kBlack;
-          b->color_ = Node::kRed; 
+          // b->color_ = Node::kRed; 
           break;
         } else {
+          b->color_ = Node::kRed;
           node = node->parent_;
         }
       }
